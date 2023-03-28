@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Setup Canvas</title>
+
+        <style>
+            #canvas{
+                border: 1px solid;
+                width: 100%;
+                height: 500px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <canvas id="canvas"> Browser anda tidak support tag canvas </canvas>
+
+        <script>
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext('2d');
+            canvas.width = canvas.scrollWidth;
+            canvas.height = canvas.scrollHeight;
+
+            ctx.fillStyle="#163c9d";
+            ctx.fillRect(20,20,200,200);
+
+            ctx.strokeStyle="red";
+            ctx.lineWidth=10;
+            ctx.strokeRect(20,20,200,200);
+
+            ctx.lineWidth=3;
+            ctx.strokeRect(250,20,200,200);
+
+            ctx.beginPath();
+            ctx.arc(600,120,50,0,Math.PI*2);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(600,300,50,0,Math.PI*2);
+            ctx.strokeStyle="rgb(232, 230, 21";
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(700,100);
+            ctx.lineTo(850,150);
+            ctx.lineTo(850,300);
+            ctx.lineTo(700,300);
+            ctx.closePath();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(950,200);
+            ctx.lineTo(1000,400);
+            ctx.lineTo(900,400);
+            ctx.closePath();
+            ctx.fill();
+
+        </script>
+    </body>
+</html>
